@@ -1,0 +1,25 @@
+{
+  "name": "conference-registration-app",
+  "version": "1.0.0",
+  "description": "Conference Registration Application",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "mocha test/apiTest.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3",
+    "supertest": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/conference-registration-app.git"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+// Create a new registration
+  createRegistration(req, res) {
+    const { conferenceId, attendeeName, email } = req.body;
+    const registration = Registration.createRegistration(conferenceId, attendeeName, email);
+    res.status(201).json(registration);
+  }
+
+  // Update registration by ID
+  updateRegistration(req, res) {
+    const { id } = req.params;
+    const { attendeeName, email } = req.body;
+    const updatedRegistration = Registration.updateRegistration(id, attendeeName, email);
+    if (updatedRegistration) {
+      res.json(updatedRegistration);
+    } else {
+      res.status(404).json({ error: 'Registration not found' });
+    }
+  }
+
+  // Delete registration by ID
+  deleteRegistration(req, res) {
+    const { id } = req.params;
+    const deletedRegistration = Registration.deleteRegistration(id);
+    if (deletedRegistration) {
+      res.json(deletedRegistration);
+    } else {
+      res.status(404).json({ error: 'Registration not found' });
+    }
+  }
